@@ -28,7 +28,7 @@ public class CardDeliveryOrderTest {
         $("[data-test-id=phone] [class='input__control']").setValue("+79999999999");
         $("[data-test-id=agreement] [class='checkbox__box']").click();
         $("[class='button__content']").click();
-        $(withText("Ура!")).shouldBe(visible, Duration.ofSeconds(15));
+        $(withText("Успешно!")).shouldBe(visible, Duration.ofSeconds(15));
         $(".notification__content").shouldBe(visible, Duration.ofSeconds(15)).shouldHave(exactText("Встреча успешно забронирована на " + planningDate));
     }
 
