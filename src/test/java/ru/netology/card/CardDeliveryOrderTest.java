@@ -20,7 +20,7 @@ public class CardDeliveryOrderTest {
 
         Configuration.headless = true;
         open("http://localhost:9999/");
-        $("[data-test-id=city] [class='input__control']").setValue("Белгород");
+        $("[data-test-id=city] [class='input__control']").setValue("Шебекино");
         String planningDate = LocalDate.now().plusDays(5).format(DateTimeFormatter.ofPattern("dd.MM.yyyy"));
         $("[data-test-id='date'] [class='input__control']").doubleClick().sendKeys(Keys.BACK_SPACE);
         $("[data-test-id='date'] [class='input__control']").setValue(planningDate);
